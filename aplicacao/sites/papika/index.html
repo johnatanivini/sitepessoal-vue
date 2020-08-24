@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Papika</title>
+	  <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" ></script>
+<script type="text/javascript">
+function pageY(elem) {
+    return elem.offsetParent ? (elem.offsetTop + pageY(elem.offsetParent)) : elem.offsetTop;
+}
+var buffer = 10; //scroll bar buffer
+function resizeIframe() {
+    var height = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+    height -= pageY(document.getElementById('ifm'))+ buffer ;
+    height = (height < 0) ? 0 : height;
+    document.getElementById('ifm').style.height = height + 'px';
+}
+window.onresize = resizeIframe;
+window.onload = resizeIframe;
+</script>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	html, body{
+		min-height:100%;
+		overflow:hidden;
+	}
+</style>
+   </head>
+   <body>
+		<iframe id="ifm" width="100%"  src="http://papika.web967.uni5.net"></iframe>
+   </body>
+</html>

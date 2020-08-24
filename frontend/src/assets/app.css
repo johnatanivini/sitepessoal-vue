@@ -1,0 +1,10 @@
+@import url('./font-awesome/css/font-awesome.min.css');
+@import url('./fonts.css');
+
+* {
+    font-family: opensans-regular, sans-serif;
+}
+
+header .banner-text h1{
+    font: 90px/1.1em opensans-bold, sans-serif
+}

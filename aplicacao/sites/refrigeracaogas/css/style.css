@@ -1,0 +1,114 @@
+/* CSS Document */
+@import url('reset.css');
+h1,
+h2,
+h3 { color:#666; font-weight:bold }
+body { background:#efefef url(images/bg_top_body.jpg) no-repeat top center }
+/*header*/
+#header { width:990px; padding:0 5px; margin:0 auto; position:relative; height:165px }
+#header .menu { text-align:center; height:40px; line-height:40px }
+#header .menu ul li { display:inline-block; }
+#header .menu ul li a { float: left; padding: 0 6px 0 0; color: white; text-shadow: 0 -1px 0 black; }
+#header .menu ul li a span { float: left; padding: 0 10px; }
+#header .menu ul li a:hover { background: url(images/menu_top.png) no-repeat right -36px; text-shadow:none; color:#000 }
+#header .menu ul li a:hover span { background: url(images/menu_top.png) no-repeat left 8px; }
+#header .menu ul li a.current { background: url(images/menu_top.png) no-repeat right -36px; text-shadow:none; color:#000 }
+#header .menu ul li a.current span { background: url(images/menu_top.png) no-repeat left 8px; }
+#header .logo-rm { float:left; margin:50px 0 0 0 }
+#header .logo-montese-gas { float:right; }
+#header .form-busca { margin:50px auto 0 auto; width:530px }
+#header .form-busca input[type="text"] { background:url(images/input_search.png) no-repeat center right; height:50px; width:368px; float:left; padding:0 10px; text-shadow:0 1px 0 #fff; line-height:50px }
+#header .form-busca input[type="submit"] { background:url(images/submit_search.png) no-repeat center left; height:50px; width:80px; float:left; cursor:pointer }
+#header .form-busca input[type="submit"]:hover { background:url(images/submit_search_hover.png) no-repeat center left; }
+/*conteudo*/
+#conteudo { width:990px; margin:0 auto 20px auto; padding:0 5px; }
+#conteudo .topo-conteudo { background:url(images/top-conteudo.png) no-repeat bottom center; height:39px; }
+#conteudo .meio-conteudo { padding: 0 10px; background:url(images/meio-conteudo.png) repeat-y center }
+#conteudo .footer-conteudo { background:url(images/footer-conteudo.png) no-repeat center top; height:20px; }
+/*menu-vertical*/
+#menu-vertical { width:200px; float:left; display:block; position:relative }
+#menu-vertical .menu-topo { background:url(images/menu-top.png) no-repeat center bottom; height:42px; display:block; position:absolute; top:-42px; left:0; width:190px; line-height:42px; color:#FFF; font-size:16px; font-weight:bold; padding:0 0 0 10px }
+#menu-vertical .menu-meio { background:url(images/menu-meio.png) repeat-y center; display:block; padding:0 10px; }
+#menu-vertical .menu-bottom { background:url(images/menu-bottom.png) no-repeat center top; height:18px; display:block }
+#menu-vertical ul li { background: url(images/listra_menu.png) no-repeat center bottom; }
+#menu-vertical ul li a { display:block; padding:5px 0; background:url(images/seta-menu.png) no-repeat right center; color:#666 }
+#menu-vertical ul li a:hover { color:#F90 }
+/*elementos da pagina*/
+#pagina { float:left; width:765px; margin-left:5px }
+#pagina .produtos { margin: 0 10px 30px 20px; float:left; width:215px; height:270px; background:url(images/bg_produtos.jpg) no-repeat center top; display:block; padding:0 5px; position:relative; overflow:hidden }
+#pagina .produtos .foto { text-align:center; padding:5px; height:100px; width:200px; overflow:hidden }
+#pagina .produtos p { color: #666; }
+#pagina .produtos p.descricao { text-align:center; font-size:12px; margin-bottom:10px }
+#pagina .produtos .preco-real { font-size:12px; text-decoration:line-through }
+#pagina .produtos .preco-desconto { font-size:16px }
+#pagina .produtos .botoes { position:absolute; bottom:0; right:5px }
+#pagina .produtos .botoes .bt_detalhes { float:right; display:block; background:url(images/bt_detalhe.png) no-repeat center top; width:45px; height:33px }
+#pagina .produtos .botoes .bt_detalhes:hover { background-position:center bottom }
+#pagina .produtos .botoes .bt_comprar { float:right; display:block; background:url(images/bt_comprar.png) no-repeat center top; width:115px; height:32px }
+#pagina .produtos .botoes .bt_comprar:hover { background-position:center bottom }
+/*se estiver esgotado*/
+#pagina .esgotado { background:url(images/bg_produtos_esgotado.jpg) no-repeat center top; }
+#pagina .produtos .botoes .avise-me { float:right; display:block; background: url(images/bt_expira.png) no-repeat center top; width:201px; height:30px }
+#pagina .produtos .botoes .avise-me:hover { background-position:center bottom }
+#pagina .produtos .esgotado { background: url(images/esgotado.png) no-repeat center top; width: 180px; height: 141px; position: absolute; top: -6px; right: -13px; }
+/*produtos mais vendidos*/
+#mais-vendidos { width:990px; margin:0 auto 15px auto; padding:0 5px; background:url(images/bg_mais_vendidos.png) no-repeat center top; height:200px; position:relative }
+#mais-vendidos .titulo { background: url(images/bt_mais_vendidos.png) no-repeat center top; width: 220px; height: 40px; line-height: 40px; color: white; font-size: 20px; font-weight: bold; padding: 0 10px; position: absolute; top: -15px; left: 15px; }
+#mais-vendidos .produtos { margin:35px 0 0 0; background:url(images/filete_mais_vendidos.png) no-repeat right center; float:left; width:270px; height:140px; display:block; padding:0 55px 0 5px; position:relative; overflow:hidden }
+#mais-vendidos .produtos .foto { text-align:center; padding:5px; height:140px; width:50px; overflow:hidden; float:left; }
+#mais-vendidos .produtos .foto img { border:solid 1px #666 }
+#mais-vendidos .produtos p { color: #666; }
+#mais-vendidos .produtos p.descricao { text-align:left; font-size:12px; margin-bottom:10px }
+#mais-vendidos .produtos .preco-real { font-size:12px; text-decoration:line-through }
+#mais-vendidos .produtos .preco-desconto { font-size:16px }
+#mais-vendidos .produtos .botoes { position:absolute; bottom:0; right:5px }
+#mais-vendidos .produtos .botoes .bt_detalhes { float:right; display:block; background: url(images/bt_detalhes_mais_vendidos.png) no-repeat center top; width:30px; height:22px }
+#mais-vendidos .produtos .botoes .bt_detalhes:hover { background-position:center bottom }
+#mais-vendidos .produtos .botoes .bt_comprar { float:right; display:block; background: url(images/bt_comprar_mais_vendidos.png) no-repeat center top; width:74px; height:21px }
+#mais-vendidos .produtos .botoes .bt_comprar:hover { background-position:center bottom }
+/*se estiver esgotado*/
+#mais-vendidos .esgotado { background:url(images/bg_produtos_esgotado.jpg) no-repeat center top; }
+#mais-vendidos .produtos .botoes .avise-me { float:right; display:block; background: url(images/bt_expira.png) no-repeat center top; width:201px; height:30px }
+#mais-vendidos .produtos .botoes .avise-me:hover { background-position:center bottom }
+#mais-vendidos .produtos .esgotado { background: url(images/esgotado.png) no-repeat center top; width: 180px; height: 141px; position: absolute; top: -6px; right: -13px; }
+/*nossos parceiros*/
+#nossos-parceiros { width:990px; margin:0 auto; padding:0 5px; background: url(images/bg_parceiros.png) no-repeat center top; height:165px; position:relative }
+#nossos-parceiros .titulo { background: url(images/bt_mais_vendidos.png) no-repeat center top; width: 220px; height: 40px; line-height: 40px; color: white; font-size: 20px; font-weight: bold; padding: 0 10px; position: absolute; top: -15px; left: 15px; }
+#nossos-parceiros .logomarcas .logo { margin:45px 0 0 10px; float:left }
+/*institucional*/
+#institucional { background: url(images/institucional.png) no-repeat center top; width:990px; padding:0 5px; margin:10px auto 0 auto; height:240px }
+#institucional h3 { margin-bottom:5px }
+#institucional ul li a { color:#666; font-size:12px }
+#institucional ul li a:hover { color:#F90 }
+#institucional .forma-de-pagamento,
+#institucional .institucional,
+#institucional .central-de-atendimento,
+#institucional .certificados-digitais { float:left; padding: 10px 29px 0 29px; }
+#institucional .botoes { border-top: solid 1px #ccc; margin:5px 5px 0 5px }
+#institucional .botoes a { float: left; display: block; color: white; text-shadow: 0 -1px 0 black; background: url(images/bt_institucional.png) no-repeat -410px -41px; height: 40px; padding-left: 20px; line-height: 36px; margin:20px 10px 0 10px  }
+#institucional .botoes a span { background:url(images/bt_institucional.png) no-repeat right 0; height:36px; display:block; padding-right:20px }
+#institucional .botoes a:hover { color:#ccc; }
+#institucional .botoes a.politica-trocas{ float:right}
+#institucional .botoes a.politica-privacidade{ margin-left:150px}
+/*endereco*/
+#endereco{ font-size:12px; color: #999; text-align:right; width:990px; margin:10px auto; padding:0 5px; margin-bottom:75px}
+/*area do cliente*/
+#user-fixo { background:url(images/filete_user.jpg) repeat-x top; height:63px; display:block; width:99.9%; position:fixed; left:0; bottom:0 }
+#user-fixo .user { width:990px; margin:0 auto; padding:0 5px }
+#user-fixo .user .menu-user { float:left }
+#user-fixo .user .menu-user ul li { display:inline-block; line-height:63px; height:63px; background:url(images/filete_menu_user.png) no-repeat right center; }
+#user-fixo .user .menu-user ul li a { color:#FFF; padding:0 10px 0 30px }
+#user-fixo .user .menu-user ul li a.login { background:url(images/login.png) no-repeat left center }
+#user-fixo .user .menu-user ul li a.cadastro { background:url(images/cadastro.png) no-repeat left center }
+#user-fixo .user .menu-user ul li a.pedido { background:url(images/pedidos.png) no-repeat left center }
+#user-fixo .user .menu-user ul li a.sair { background:url(images/sair.png) no-repeat left center }
+#user-fixo .user .carrinho { font-weight:bold; float: right; margin: 7px 0 0 0; width: 425px; padding: 0 0 0 70px; height:48px; line-height:48px; background:url(images/bg_carrinho.png) no-repeat center top }
+#user-fixo .user .carrinho .meu-carrinho { display: block; background: url(images/bt_meu_carrinho.png) no-repeat center top; width: 150px; height: 29px; float: right; margin: 10px 0 0 0; }
+#user-fixo .user .carrinho .meu-carrinho:hover { background-position:center bottom }
+#user-fixo .user .carrinho .item-carrinho { margin-right:20px; }
+/*outros*/
+.clear { clear:both; display:block }
+.laranja { color:#F60 }
+.nav { float:right; margin-top:12px }
+.next { display:block; width:20px; height:20px; background:url(images/next.png) no-repeat center top; float:right }
+.prev { display:block; width:20px; height:20px; background:url(images/prev.png) no-repeat center top; float:right }

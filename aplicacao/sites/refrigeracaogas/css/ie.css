@@ -1,0 +1,6 @@
+/* CSS Document */
+#header .menu ul li a:hover{background: url(images/menu_top.png) no-repeat right -36px; text-shadow:none; color:#000}
+#header .menu ul li a:hover span{background: url(images/menu_top.png) no-repeat left 8px;}
+#header .menu ul li a.current{background: url(images/menu_top.png) no-repeat right -36px; text-shadow:none; color:#000}
+#header .menu ul li a.current span{background: url(images/menu_top.png) no-repeat left 8px;}
+

@@ -1,0 +1,106 @@
+﻿/* CSS Document */
+/*texto destaque rosa :#c37188*/
+@import url(reset.css);
+
+.header,
+.conteudo,
+.cursos,
+.footer{ margin:0 auto; width:990px}
+a{-webkit-transition:all .5s linear; -moz-transition:all .5s linear}
+/*header*/
+.header { margin-bottom: 20px; position: relative}
+.header .logo{ float:left; margin-right:5px}
+.header .busca{ float:left; width:825px;color:#c37188; position:relative}
+.header .redes{ position:absolute; right: 0px;top: 16px;}
+.header .busca button{  margin-left:5px}
+.header .busca .bg_forms{ background:#c37188; color:#FFF; height:35px; padding:15px}
+.header .busca .bg_forms form{ float:left;}
+.bg_forms #newsletter{ margin-right:130px;}
+.bg_forms form label{ color:#FFF; float:left; font-size: 13px; margin-top: 10px}
+.bg_forms form input[type=submit]{ padding: 7px; background:#FF884E; color:#fff; border:none; float:left; cursor:pointer; }
+.bg_forms form input[type=submit]:hover{ background: #ff9900}
+/*menu*/
+.header .menu{position: absolute; bottom: 0; left:165px}
+.header .menu ul li { display:block; float:left;}
+.header .menu ul li a{ display:block; padding:5px 20px; background:url(i/link_menu.jpg) no-repeat left center; color:#999; font-size:14px}
+.header .menu ul li a:hover{ background:url(i/link_menu_hover.jpg) no-repeat left center; color:#c37188}
+/*content*/
+.conteudo .area_busca{ width:210px; float:left; color: #666}
+.area_busca form label{ float: none;width:210px}
+.area_busca .jqTransformButton{ margin-top: 10px; float: right; display: block}
+.area_busca h2{ color:#666; font-size: 18px}
+.conteudo .paginas{ width: 550px; float:left; padding: 0 10px; color: #666; line-height: 35px}
+.paginas .pagseguro,.paginas .santander{ float: left}
+.conteudo input[type="submit"]{ padding: 5px; color: #fff; background: #888; border:1px solid #ebebeb; cursor: pointer;}
+.conteudo input[type="submit"]:hover{ background: #666}
+.paginas .banner,.paginas .banner .cicle{ width:550px; height: 300px; background: #ebebeb; position:relative}
+.banner img{ position: absolute}
+.banner #nav{ position: absolute; z-index:50; display: block; bottom: 0; left: 0}
+.banner #nav a { background:#FF884E; padding:0 10px; display:block; float: left; margin: 0 5px 0 0}
+.banner #nav a.activeSlide { background:#c37188;}
+.conteudo .sidebar{ width:210px; float:right;}
+.conteudo .painel{ width: 980px; display: block; float:left; color:#c37188; margin-bottom: 10px; background: #ebebeb}
+.conteudo .aula_curso .jqTransformInputWrapper,.conteudo .jqTransformInputWrapper{ float: none;}
+.conteudo .detalhe_curso{ width:210px; float: left;}
+.conteudo .detalhe_curso .foto_curso{text-align: center; background: #f8f8f8}
+.detalhe_curso .foto_curso img{ border: 1px solid #ebebeb}
+.conteudo h1.titulo{ color: #666; font-weight: bold; border-bottom: solid 2px #c37188; padding-bottom: 5px; font-size: 20px}
+.detalhe_curso p.titulo, .detalhe_curso p.valor{ color:#FF884E; padding: 5px }
+.conteudo .sobre_curso{ width: 760px}
+.detalhe_curso ul li{ line-height: 30px; background: url('i/ok.png') no-repeat 180px center}
+.conteudo .parceiros{float: left;width: 166px;height: 140px;padding: 5px;border: solid 1px #EBEBEB;text-align: center;margin: 10px 5px 0 0;-webkit-transition:all .2s linear; -moz-transition:all .2s linear}
+.conteudo .parceiros:hover{opacity:.5; opacity:filter(opacity:50)}
+.painel li,
+.painel_lista li{width:311px; float: left; margin-right: 10px; border: solid 1px #ebebeb; padding: 5px}
+.painel_lista li{ color: #999}
+.painel_lista li.ok_curso{ background:url('i/ok.png') no-repeat 280px center}
+.painel_lista li.users{background:url('i/users.png') no-repeat 280px center}
+.painel_lista li.vendas{background:url('i/cart.png') no-repeat 280px center; margin-right: 0}
+.painel li{ width: 308px}
+.conteudo .sair{ display: block; float: right; font-size: 12px; color: #666; padding: 5px; color:#c37188;}
+.conteudo .sair img{vertical-align: middle; }
+.sidebar h2{ color: #666; text-align: right}
+.cursos{ margin-top: 10px}
+.cursos .curso_destaque{ float: left; width:190px; background: #FF884E; color: #fff; padding: 10px; position: relative}
+.curso_destaque .seta_abs{ position: absolute;right: -13px;top: 46%; z-index: 10;}
+.curso_destaque .curso_foto{text-align: center; margin: 5px 0}
+.curso_destaque h3{ font-size: 20px; color:#fff; text-align: center; font-weight: bold;}
+.curso_destaque .leiamais{text-align: center;}
+.cursos .outros_cursos{ float:left; width:780px; background:#c37188; height: 330px}
+.outros_cursos .itens_cursos{ width: 350px; height: 110px; float: left; background: #fff; position:relative; color:#666; font-size: 12px; margin:25px 10px 0 10px; padding:10px}
+.itens_cursos img{ float:left; margin: 0 5px 0 0}
+.itens_cursos h3{ color:#FF884E}
+.itens_cursos .leiamais{ position: absolute; bottom: 3px; right:3px}
+.footer{ padding:10px 0; font-size: 10px; color: #666}
+/*/////////*/
+.clear{ clear:both; display:block}
+.small-text{ font-size: 12px; text-align: right}
+.seta{vertical-align:middle; margin:0 5px 0 0}
+.right{ float: right;}
+.leiamais{ color:#fff; background:#FF884E; display: block; padding: 2px 10px; text-align: center; border-radius:10px;  float: right}
+.leiamais:hover{ background:#c37188;}
+.left{ float: left; display: block}
+.red{color:#990000; font-weight: bold; display: block}
+/*//personalizando o input file///*/
+.inputFile {
+    width: 210px;
+    height: 65px;
+    position: relative;
+    overflow: hidden;
+    background: url(i/input.jpg) no-repeat center
+}
+.inputFile span {
+    display: block;
+    position:absolute;
+    padding:5px
+}
+.inputFile input {
+    position:absolute;
+    right:0;
+    z-index: 2;
+    font-size:100px; /* Aumenta tamanho do campo */
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+
+ #perdi_senha .jqTransformInputInner{ float:none; margin:0 auto}   

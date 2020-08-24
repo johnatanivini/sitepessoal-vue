@@ -5,8 +5,8 @@ vendor
 site_velho/
 # local env files
 .env
-.env.local
-.env.*.local
+!.env.local
+!.env.*.local
 aplicacao/*
 !aplicacao/api/
 !aplicacao/sites/

@@ -1,61 +1,69 @@
 <?php
 
-use DI\Container;
 use Api\Portfolio;
 use Dotenv\Dotenv;
+use Api\CustomErrorRenderer;
 use Slim\Factory\AppFactory;
 use PHPMailer\PHPMailer\PHPMailer;
+use Slim\Psr7\Response;
 use Psr\Container\ContainerInterface;
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use Api\Controllers\PortfolioController;
+use Api\Email;
+use Api\ValidarFormContato;
+use Slim\Exception\HttpNotFoundException;
+use Slim\Exception\HttpMethodNotAllowedException;
+use Psr\Http\Message\ResponseInterface as ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface as RequestInterface;
 
 require __DIR__ . '/vendor/autoload.php';
 
 $dotenv = Dotenv::createImmutable(__DIR__);
-$dot = $dotenv->load();
+$dotenv->load();
 
-echo "<pre>";
-var_dump($dot);
-die();
-$container = new Container();
-
-$container->set('mail', function () {
-
-    $siteOwnersEmail = getenv('MAIL_USER');
-
-    $mail = new PHPMailer();
-    $mail->Host = getenv('MAIL_HOST');
-    $mail->Username = $siteOwnersEmail;
-    $mail->Password = getenv('MAIL_PASS');
-    $mail->Port = 587;
-    $mail->SMTPAuth = true;
-    $mail->isHTML(true);
-    $mail->CharSet = "utf-8";
-    $mail->SMTPSecure = "ssl";
-    $mail->From = $siteOwnersEmail;
-    $mail->FromName = getenv('MAIL_NAME');
-    $mail->addAddress(getenv('MAIL_ADDRESS'), getenv('MAIL_NAME'));
-
-    return $mail;
-});
-
-AppFactory::setContainer($container);
 
 $app = AppFactory::create();
+$app->setBasePath($_ENV['BASE_PATH']);
+$app->addRoutingMiddleware();
 
-$app->setBasePath('/api');
+$errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
-$app->get('/portfolio', function (Request $request, Response $response, $args) {
 
-    echo "<pre>";
+
+$errorMiddleware->setErrorHandler(
+    HttpNotFoundException::class,
+    function (RequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+
+        $response = new Response();
+        $response->withHeader('Content-type', 'application/json')->getBody()
+            ->write(json_encode(['code' => 0, 'message' => '404 - Página não encotrada']));
+
+
+        return $response->withStatus(404);
+    }
+);
+
+
+$errorMiddleware->setErrorHandler(
+    HttpMethodNotAllowedException::class,
+    function (RequestInterface $request, Throwable $exception, bool $displayErrorDetails) {
+        $response = new Response();
+        $response->withHeader('Content-type', 'application/json')->getBody()
+            ->write(json_encode(['code' => 0, 'message' => '405 - Método não permitido']));
+
+        return $response->withStatus(405);
+    }
+);
+
+
+$app->get('/portfolio', function (RequestInterface $request, ResponseInterface $response, $args) {
+
+
     $portfoio = (new Portfolio($request))->getSites();
-
-
     $response->withHeader('Content-type', 'application/json')->getBody()->write(json_encode($portfoio));
     return $response;
 });
 
-$app->get('/logos', function (Request $request, Response $response, $args) {
+$app->get('/logos', function (RequestInterface $request, ResponseInterface $response, $args) {
 
     $portfoio = (new Portfolio($request))->getLogotipos();
 
@@ -64,70 +72,50 @@ $app->get('/logos', function (Request $request, Response $response, $args) {
 });
 
 
-$app->get('/skills', function (Request $request, Response $response, $args) {
+$app->get('/skills', function (RequestInterface $request, ResponseInterface $response, $args) {
     $portfoio = (new Portfolio($request))->getSkills();
     $response->withHeader('Content-type', 'application/json')->getBody()->write(json_encode($portfoio));
     return $response;
 });
 
 
-$app->post('/enviar-email', function (Request $request, Response $response, $args) {
+$app->get('/enviar-email', function (RequestInterface $request, ResponseInterface $response, $args) {
 
     $message = '';
-    $parametros = $request->getParsedBody();
+    $parametros = (object) $request->getParsedBody();
 
-    $name = trim(stripslashes($parametros['contactName']));
-    $email = trim(stripslashes($parametros['contactEmail']));
-    $subject = trim(stripslashes($parametros['contactSubject']));
-    $contact_message = trim(stripslashes($parametros['contactMessage']));
-    $contact_captcha = intval(trim(stripslashes($parametros['contactCaptcha'])));
+    $validar = new ValidarFormContato($request);
 
-    // Check Name
-    if (strlen($name) < 2) {
-        $error['name'] = "Por favor, coloque seu nome";
-    }
-    // Check Email
-    if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
-        $error['email'] = "Por favor, entre com um email válido.";
-    }
-    // Check Message
-    if (strlen($contact_message) < 15) {
-        $error['message'] = "Por favor entre com seu comentário, deverá ser maior que 15 caractéres.";
-    }
-    // Subject
-    if ($subject == '') {
-        $subject = "Formulario de Contato";
-    }
+    $validar->validar();
 
-    //Check Capcha
-    if ($contact_captcha != 89) {
-        $error['contact_captcha'] = "O valor do captcha está errado! Coloque o valor correto.";
-    }
+    // if (!$validar->isValid()) {
+    //      $response->getBody()->write(json_encode($validar->getErros()));
+    //      return $response;
+    // }
 
     // Set Message
-    $message .= "Email from: " . $name . "<br />";
-    $message .= "Email address: " . $email . "<br />";
+    $message .= "Email from: " . $parametros->contactName . "<br />";
+    $message .= "Email address: " . $parametros->contactEmail . "<br />";
     $message .= "Message: <br />";
     $message .= "<hr>";
-    $message .= $contact_message;
+    $message .= $parametros->contactMessage;
     $message .= "<br /> ----- <br /> Este email foi enviado do formulário de contato do seu site.. <br />";
 
     $response =  $response->withHeader('Content-type', 'application/json');
+
     try {
         /**
-         * @var PHPMailer $email
+         * @var Email $email
          */
-        $email = $this->get('mail');
+        $email = new Email();
 
-        $email->Subject = $subject;
-        $email->Body = $message;
+        $email->enviar($parametros->contactSubject, $message);
 
-        $email->send();
-
-        $response->withStatus(200)->getBody()->write('{success:true}');
+        $response->withStatus(200)->getBody()->write(json_encode(['code' => 1, 'message' => 'Enviado com successo!']));
+    
     } catch (Exception $e) {
 
-        $response->withStatus(400)->getBody()->write('{success:false}');
+        $response->withStatus(400)->getBody()->write(json_encode(['code' => 0, 'message' => 'Não foi possível enviar o email', 'error' => $e->getMessage()]));
     }
 
     return $response;

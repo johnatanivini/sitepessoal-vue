@@ -228,11 +228,27 @@ header .banner-text p {
     font: 14px/21px 'opensans-bold', sans-serif;
     color: #fff;
     }
+ 
+    .portfolio-item .portfolio-item-meta a{
+        color: #e95d23
+    }
+    .portfolio-item .portfolio-item-meta a:hover{
+        color:#fff
+    }
+    
 .popup-modal .description-box .title {
     font: 15px/24px 'opensans-bold', sans-serif;
     margin-bottom: 12px;
     color: #111;
     }
+    .popup-modal{
+        transition: all 2ms linear;
+        width:100%;
+        max-width:100%;
+        background: none;
+        position: absolute;
+      
+    }  
 #call-to-action .title {
     font: 28px/36px 'opensans-bold', sans-serif;
     color: #EBEEEE;
@@ -299,14 +315,60 @@ header .banner-text p {
     border-radius: 100%;
     padding-top: 9%;
     line-height: normal;
-    border-color: #ebebeb;
+    border: solid 5px #383f6d11;
 
 }
-.habilidades .color.azul{
-    background: #0E3460;
+
+.habilidades .color:hover {
+    border: solid 5px #383f6d;
+    transition: border-color 300ms ease-in-out;
+}
+
+.habilidades .color.blue{
+    background: #777bb3;
     color:#fff;
 }
 
+.habilidades .color.orange{
+    background: #f64225;
+    color:#fff;
+}
+
+.habilidades .color:nth-child(3){
+    background: #ee4323;
+    color:#fff;
+}
+
+.habilidades .color.blueligth{
+    background: #31648c;
+    color:#fff;
+}
+
+.habilidades .color.yellow{
+    background:rgb(240,219,79);
+    color:#222;
+}
+
+.habilidades .color.wordpress{
+    background:#1f7196;
+    color:#fff;
+}
+
+.habilidades .color.html{
+    background:#df4527;
+    color:#fff;
+}
+
+.habilidades .color.css{
+    background:#0072b8;
+    color:#fff;
+}
+
+
+.habilidades .color.ocean{
+    background: #0769ad;
+    color:#fff;
+}
 header .scrolldown a:hover{
     color:#d86b4a
 }

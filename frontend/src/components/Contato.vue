@@ -165,6 +165,7 @@ export default {
         this.errorCaptcha = "Valor incorreto tente outro valor!"
         this.showMessage = true;
         this.showMessageCss = "alert-info"
+        this.alteraValor()
     
       }
     

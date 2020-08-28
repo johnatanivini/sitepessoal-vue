@@ -41,7 +41,7 @@ class Portfolio
                 'url' => 'http://segundaopiniao.jor.br',
                 'title' => 'Site Segunda Opinião ',
                 'descricao' => "
-Portal Jornalistico com opniões de figuras públicas e interessados em por sua opinião sobre Política, Artes, Cultura, e entre outros assuntos, prtal implementado em WordPress",
+Portal Jornalistico com opniões de figuras públicas e interessados em cultura, arte, e política",
                 'imagem' => $this->url . '/images/portfolio/modals/segundaopiniao.jpg',
                 'tags' => 'WordPress, PHP, MySQL'
             ),
@@ -55,7 +55,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/seculosimoveis',
+                'url' => $this->url.'/sites/seculosimoveis',
                 'title' => 'Site Seculos Imóveis',
                 'descricao' => "Portal de Ímoveis, implementado posteriormente em PHP e MySql",
                 'imagem' => $this->url . '/images/portfolio/modals/seculosimoveis.jpg',
@@ -63,7 +63,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/saleimoveis',
+                'url' => $this->url.'/sites/saleimoveis',
                 'title' => 'Site Portal de Ímoveis',
                 'descricao' => "Layout para um portal de venda de imóveis",
                 'imagem' => $this->url . '/images/portfolio/modals/saleimoveis.jpg',
@@ -71,7 +71,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/papika/papika-home2.html',
+                'url' => $this->url.'/sites/papika/papika-home2.html',
                 'title' => 'Site Papika',
                 'descricao' => "Sistema de assinaturas para bebês, integrado com o sistema de assinaturas do pagamento online PagSeguro",
                 'imagem' => $this->url . '/images/portfolio/modals/papika.jpg',
@@ -80,7 +80,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
 
 
             array(
-                'url' => 'sites/missgym/',
+                'url' => $this->url.'/sites/missgym/',
                 'title' => 'Miss Gym',
                 'descricao' => "Layout para loja de fitness,acessorios e roupas.",
                 'imagem' => $this->url . '/images/portfolio/modals/missgym.jpg',
@@ -88,7 +88,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/pontodobebe/',
+                'url' => $this->url.'/sites/pontodobebe/',
                 'title' => 'Ponto do Bebê',
                 'descricao' => "Layout para portal para gestantes",
                 'imagem' => $this->url . '/images/portfolio/modals/pontodobebe.jpg',
@@ -96,7 +96,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/refrigeracaogas/',
+                'url' => $this->url.'/sites/refrigeracaogas/',
                 'title' => 'Refrigeração Gás',
                 'descricao' => "Layout para loja e-commerce de peças de refrigeração e serviços",
                 'imagem' => $this->url . '/images/portfolio/modals/refrigeracaogas.jpg',
@@ -104,7 +104,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
             ),
 
             array(
-                'url' => 'sites/gestanteemcurso/',
+                'url' => $this->url.'/sites/gestanteemcurso/',
                 'title' => 'AVA Gestante em Curso',
                 'descricao' => "Layout para sistema EAD para gestantes",
                 'imagem' => $this->url.'/images/portfolio/modals/gestanteemcurso.jpg',

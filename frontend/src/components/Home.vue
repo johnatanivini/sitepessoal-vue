@@ -4,8 +4,8 @@
     <Banner />
     <div class="row">
       <p class="scrolldown">
-        <a class="smoothscroll" href="#about"
-          ><i class="icon-down-circle"></i
+        <a class="smoothscroll" v-scroll-to="'#about'" href="#about"
+          ><i class="fa fa-angle-down"></i
         ></a>
       </p>
     </div>

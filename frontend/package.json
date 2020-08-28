@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-analytics": "^5.22.1",
+    "vue-scrollto": "^2.18.2",
+    "webpack": "^4.44.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

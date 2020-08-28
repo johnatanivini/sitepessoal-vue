@@ -11,9 +11,9 @@ class Portfolio
     private $logotipos;
     private $skills;
     private $url;
-    public function __construct(Request $request)
+    public function __construct()
     {
-        $this->url = $request->getServerParams()['HTTP_HOST'];
+        $this->url = $_ENV['BASE_URL'];
     }
 
     public function getSites()
@@ -107,7 +107,7 @@ Portal Jornalistico com opniões de figuras públicas e interessados em por sua 
                 'url' => 'sites/gestanteemcurso/',
                 'title' => 'AVA Gestante em Curso',
                 'descricao' => "Layout para sistema EAD para gestantes",
-                'imagem' => 'images/portfolio/modals/gestanteemcurso.jpg',
+                'imagem' => $this->url.'/images/portfolio/modals/gestanteemcurso.jpg',
                 'tags' => 'Fireworks, Codeigniter'
             )
 

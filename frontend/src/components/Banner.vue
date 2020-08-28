@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="banner-text">
-      <h1>Johnatan Ívini</h1>
+     <h1 class="responsive-headline" style="font-size: 71.3px;">Johnatan Ívini </h1>
       <h2>Desenvolvedor Fullstack PHP</h2>
       <p>Tecnólogo em Gestão de Tecnologia da Informação - FATENE</p>
       <p>
@@ -10,37 +10,16 @@
       </p>
       <hr />
     </div>
-    <ul class="social">
-      <RedeSocial
-        titulo="Facebook"
-        icon="fa fa-facebook"
-        link="https://facebook.com/johnatanivini"
-      />
-      <RedeSocial
-        titulo="Twitter"
-        icon="fa fa-twitter"
-        link="https://twitter.com/johnatanivini"
-      />
-      <RedeSocial
-        titulo="Linkedin"
-        icon="fa fa-linkedin"
-        link="https://linkedin.com/in/johnatanivini"
-      />
-      <RedeSocial
-        titulo="Instagram"
-        icon="fa fa-instagram"
-        link="https://instagram.com/johnatanivini"
-      />
-    </ul>
+    <ListaRedesSociais class="social" />
   </div>
 </template>
 
 <script>
-import RedeSocial from "./RedeSocial";
+import ListaRedesSociais from "./ListaRedesSociais"
 
 export default {
   components: {
-    RedeSocial
+    ListaRedesSociais
   }
 };
 </script>

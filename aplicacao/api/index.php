@@ -23,7 +23,23 @@ $dotenv->load();
 
 $app = AppFactory::create();
 $app->setBasePath($_ENV['BASE_PATH']);
+
+
 $app->addRoutingMiddleware();
+
+$app->options('/{routes:.+}', function ($request, $response, $args) {
+    return $response;
+});
+
+$app->add(function($request,$handler){
+    $response = $handler->handle($request);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin','*')
+            ->withHeader('Access-Control-Allow-Headers','X-Requested-With, Content-Type,Accept,Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods','GET,POST,PUT,DELETE,PATCH,OPTIONS');
+
+});
+
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true);
 
@@ -55,6 +71,9 @@ $errorMiddleware->setErrorHandler(
 );
 
 
+
+
+
 $app->get('/portfolio', function (RequestInterface $request, ResponseInterface $response, $args) {
 
 
@@ -79,19 +98,21 @@ $app->get('/skills', function (RequestInterface $request, ResponseInterface $res
 });
 
 
-$app->get('/enviar-email', function (RequestInterface $request, ResponseInterface $response, $args) {
+$app->post('/enviar-email', function (RequestInterface $request, ResponseInterface $response, $args) {
 
     $message = '';
-    $parametros = (object) $request->getParsedBody();
+    
 
     $validar = new ValidarFormContato($request);
+   
 
     $validar->validar();
 
-    // if (!$validar->isValid()) {
-    //      $response->getBody()->write(json_encode($validar->getErros()));
-    //      return $response;
-    // }
+    if (!$validar->isValid()) {
+         $response->getBody()->write(json_encode($validar->getErros()));
+         return $response->withStatus(400);
+    }
+    $parametros = $validar->getAtributos();
 
     // Set Message
     $message .= "Email from: " . $parametros->contactName . "<br />";
@@ -119,6 +140,14 @@ $app->get('/enviar-email', function (RequestInterface $request, ResponseInterfac
     }
 
     return $response;
+});
+
+
+// Catch-all route to serve a 404 Not Fount page ig none of the routes match
+// NOTE: make sure this route is defined last
+
+$app->map(['GET','POST','DELETE','PATCH'],'/{routes:.+}',function($request,$response){
+   throw new HttpNotFoundException($request);
 });
 
 $app->run();

@@ -1,10 +1,16 @@
 <template>
-  <section id="trabalhos">
-    <div>
-      <h2>CONFIRA ALGUNS DE MEUS TRABALHOS</h2>
+  <section id="portfolio" style="position:relative">
+    <div class="circle-section cor-branca">
     </div>
+  
 
-    <PortfolioItens />
+<div class="row">
+            <div class="twelve columns collapsed">
+                <h3>Confira alguns de meus trabalhos <span class="mfp-hide" v-show="false">em WordPress</span> </h3>
+                <!-- portfolio-wrapper -->
+              <PortfolioItens/>
+        </div>
+</div>
   </section>
 </template>
 

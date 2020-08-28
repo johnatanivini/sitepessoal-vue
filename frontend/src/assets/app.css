@@ -1,10 +1,8 @@
-@import url('./font-awesome/css/font-awesome.min.css');
-@import url('./fonts.css');
 
-* {
-    font-family: opensans-regular, sans-serif;
-}
+@import url('./css/default.css');
+@import url('./css/layout.css');
+@import url("./css/fontello/css/fontello.css");
+@import url("./css/font-awesome/css/font-awesome.min.css");
 
-header .banner-text h1{
-    font: 90px/1.1em opensans-bold, sans-serif
-}
+@import url('./css/media-queries.css');
+@import url('./css/alteracoes.css');

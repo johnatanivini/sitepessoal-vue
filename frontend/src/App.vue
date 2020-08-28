@@ -2,26 +2,32 @@
   <div>
     <Home />
     <About />
-    <Skills />
+    <Resume />
     <Servicos />
     <Portfolio />
+    <Contato />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills";
+import Resume from "./components/Resume";
 import Servicos from "./components/Servicos";
 import Portfolio from "./components/Portfolio";
+import Footer from "./components/Footer";
+import Contato from "./components/Contato"
 
 export default {
   components: {
     Home,
     About,
-    Skills,
+    Resume,
     Servicos,
-    Portfolio
+    Portfolio,
+    Footer,
+    Contato
   }
 };
 </script>

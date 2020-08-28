@@ -133,7 +133,7 @@ export default {
       showMessageCss: "",
       errorEmail:'-',
       dados: {},
-     urlApi:process.env.VUE_APP_API_URL
+     urlApi:process.env.VUE_APP_API_URL || ''
     };
   },
   computed: {

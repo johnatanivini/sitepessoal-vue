@@ -8,7 +8,7 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env':{
           NODE_ENV:JSON.stringify(process.env.NODE_ENV),
-          VUE_APP_API_URL:JSON.stringify("http://johnatan.local")
+          VUE_APP_API_URL:JSON.stringify("https://www.johnatanivini.eti.br")
         },
       })
     ]

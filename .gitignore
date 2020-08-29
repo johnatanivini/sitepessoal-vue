@@ -11,6 +11,7 @@ aplicacao/*
 !aplicacao/api/
 !aplicacao/sites/
 !aplicacao/images/
+!aplicacao/api_images/
 
 # Log files
 npm-debug.log*

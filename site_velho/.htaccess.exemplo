@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^johnatanivini.eti.br$ [NC]
-RewriteRule ^(.*)$ http://www.johnatanivini.eti.br/$1 [L,R=301]

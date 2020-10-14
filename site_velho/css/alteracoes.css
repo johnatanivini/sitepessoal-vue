@@ -1,0 +1,272 @@
+/** SKILLS **/
+.php {
+    width: 90%;
+    -moz-animation: php 2s ease;
+    -webkit-animation: php 2s ease;
+    }
+
+.codeigniter {
+    width: 80%;
+    -moz-animation: codeigniter 2s ease;
+    -webkit-animation: codeigniter 2s ease;
+    }
+
+.laravel{
+    width: 40%;
+    -moz-animation: laravel 2s ease;
+    -webkit-animation: laravel 2s ease;
+    }
+
+.react{
+    width: 10%;
+    -moz-animation: react 2s ease;
+    -webkit-animation: react 2s ease;
+}
+
+.react-native{
+    width: 5%;
+    -moz-animation: react-native 2s ease;
+    -webkit-animation: react-native 2s ease;
+}
+
+.javascript{
+    width: 40%;
+    -moz-animation: javascript 2s ease;
+    -webkit-animation: javascript 2s ease;
+}
+
+.slim{
+    width: 50%;
+    -moz-animation: slim 2s ease;
+    -webkit-animation: slim 2s ease;
+}
+
+@keyframes  php {
+    0%   { width: 0;  }
+    100% { width: 90%; }
+}
+
+@keyframes  codeigniter {
+    0%   { width: 0;  }
+    100% { width: 80%; }
+}
+
+@keyframes  react {
+    0%   { width: 0;  }
+    100% { width: 5%; }
+}
+
+@keyframes  react-native {
+    0%   { width: 0;  }
+    100% { width: 10%; }
+}
+
+@keyframes  javascript {
+    0%   { width: 0;  }
+    100% { width: 40%; }
+}
+
+@keyframes  laravel{
+    0%   { width: 0;  }
+    100% { width: 40%; }
+}
+
+@keyframes  slim{
+    0%   { width: 0;  }
+    100% { width: 50%; }
+}
+
+
+
+.grid-sizer{
+    width:25%;
+    }
+.portfolio-item.columns {
+    padding: 0;
+    margin: 0 !important;
+    border:solid 2px rgba(255,255,255,.5);
+    }
+
+header .banner-text h2 {
+    font: 18px/1.9em 'librebaskerville-regular', serif;
+    color: #A8A8A8;
+    margin: 0 auto;
+    width: 70%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    }
+#about h1{
+    font: 22px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 12px;
+    }
+#resume h2{
+    font: 25px/30px 'opensans-bold', sans-serif
+    }
+
+
+header .banner-text p {
+    font        : 18px/1.9em librebaskerville-regular, serif;
+    color       : #A8A8A8;
+    margin      : 0 auto;
+    width       : 70%;
+    text-shadow : 0 1px 2px rgba(0, 0, 0, .5);
+    }
+#resume h2 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    }
+
+#portfolio h3 {
+    font: 15px/24px 'opensans-semibold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #95A3A3;
+    }
+.portfolio-item .portfolio-item-meta h4 {
+    font: 14px/21px 'opensans-bold', sans-serif;
+    color: #fff;
+    }
+#call-to-action h5 {
+    font: 28px/36px 'opensans-bold', sans-serif;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+    }
+#call-to-action h5 span{
+    display: none;
+    }
+#call-to-action .header-col h5::before {
+    font-family: 'FontAwesome';
+    content: "\f0ac";
+    padding-right: 10px;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: left;
+    float: left;
+    color: #fff;
+    }
+#contact h6{
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+    }
+
+#contact h6::before {
+    font-family: 'FontAwesome';
+    content: "\f0e0";
+    padding-right: 10px;
+    font-size: 72px;
+    line-height: 72px;
+    text-align: left;
+    float: left;
+    color: #ebeeee;
+    }
+#contact .footer-widgets h6{
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+    clear: both;
+
+    }
+#contact .footer-widgets h6::before{
+    float: none;
+    content: '';
+    }
+
+#about .contact-details .title   {
+    font: 22px/30px 'opensans-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 12px;
+    }
+#resume .education .item .title,
+#resume .work .item .title{
+    font: 25px/30px 'opensans-bold', sans-serif;
+   color: #313131;
+    }
+.portfolio-item .portfolio-item-meta .title {
+    font: 14px/21px 'opensans-bold', sans-serif;
+    color: #fff;
+    }
+.popup-modal .description-box .title {
+    font: 15px/24px 'opensans-bold', sans-serif;
+    margin-bottom: 12px;
+    color: #111;
+    }
+#call-to-action .title {
+    font: 28px/36px 'opensans-bold', sans-serif;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+    }
+#contact .footer-widgets .title {
+    font: 18px/24px 'opensans-bold', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #EBEEEE;
+    margin-bottom: 6px;
+    clear: both;
+    }
+.img-logotipo{
+    text-align: center;
+    }
+
+#contato{
+    position: relative;
+}
+.circle-section{
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    height: 86px;
+    width: 86px;
+    display: block;
+    background-color: #ebeeee;
+    border-radius: 100%;
+    top: -51px;
+}
+.circle-section.cor-marron{
+    background-color: #2B2B2B;
+    top: -44px
+}
+
+.circle-section.cor-marron-2{
+    background-color: #212121;
+    top: -44px
+}
+#about .download{
+    width: 65.333%;
+}
+.grid-item{
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.habilidades{
+
+}
+.habilidades .color{
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    vertical-align: 97px;
+    background: #212121;
+    color: #fff;
+    float: left;
+    margin: 10px;
+    border-radius: 100%;
+    padding-top: 9%;
+    line-height: normal;
+    border-color: #ebebeb;
+
+}
+.habilidades .color.azul{
+    background: #0E3460;
+    color:#fff;
+}
+

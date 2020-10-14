@@ -1,0 +1,172 @@
+
+/* 
+    Document   : style
+    Created on : Feb 12, 2012, 8:48:46 PM
+    Author     : ivini
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+@import "reset.css";
+@import "stylesheet.css";
+@import "stylesheetMy.css";
+*::selection{background:#ff9900; color:#fff}
+*::-moz-selection{background:#ff9900;color:#fff}
+*::-webkit-selection{background:#ff9900;color:#fff}
+
+h1{font-family: 'MyriadProCondensed'; font-size: 20px; font-weight: normal}
+h2,h3,h4{font-family: 'MyriadProCondensed';font-weight: normal}
+h2{ font-size: 15px}
+a{-moz-transition:all 1s linear; -webkit-transition:all 1s linear;font-family: 'MyriadProCondensed';}
+p,strong,li{font-family: 'MyriadProCondensed'; font-weight: normal; font-size: 18px}
+
+body{background: #f8f8f8 url(i/bg_body.jpg) repeat-x;}
+.conteudo{ width: 995px; margin: 10px auto;position:relative;}
+.header{background: #fff;height: 281px;margin-bottom: 12px;}
+
+.header .header_int{height: 281px; width: 995px; margin: 12px auto; position:relative}
+.header .logo{ position: absolute; left:0; top: 18%}
+.header .banner { position: absolute; left: 23%; top:21%;}
+.header .redes{ position: absolute; top: 15px; right: 8px}
+.header .plantao_header{ position: absolute; right:5px; top: 50px; width:207px; color:#666}
+.plantao_header p{ text-align: right; font-size: 12px}
+.plantao_header ul li a{ font-size: 12px; float: left; padding: 0 4px; color:#666}
+.plantao_header ul li a:hover{color:#ff9900}
+.plantao_header .fones{ float:left;background: url(i/bg_fone_header.jpg) no-repeat center top;padding: 10px 0;width: 205px;height: 36px;}
+.plantao_header .fones p{font-size: 32px;text-align: center; color:#666}
+.plantao_header a { color: #666; display: block}
+.plantao_header a:hover{color:#ff9900;}
+
+.header .menu_header{ background: url(i/bg_menu.jpg) no-repeat center center; height: 100px; width: 1000px; position:absolute; bottom: 10px;}
+.header .menu_header ul { height: 45px; line-height: 45px;width: 980px; margin: 22px auto;}
+.header .menu_header ul li { float: left; background: url(i/bg_divisao_menu.jpg) no-repeat center right}
+.header .menu_header ul li a{ color:#fff; padding:0 20px;display: block; font-size: 16px}
+.header .menu_header ul li a:hover{ color:#ff9900;background:#333}
+.header .menu_header ul li.busca{ background:none; float: right}
+.header .menu_header ul li.busca input{outline:none;background:url(i/bg_input_busca.png) no-repeat center center; border: none;padding: 11px 11px 11px 40px ;}
+
+.sidebar{float:left; width:305px;color: #666; font-size: 12px}
+
+.sidebar .redes{position:relative;width:301px; height: 81px; background: url(i/redes_sociais.png) no-repeat center center; margin: 5px 0}
+.redes .facebook,
+.redes .twitter,
+.redes .plus{position:absolute;top:30px}
+.redes .facebook{left: 10px}
+.redes .twitter{left:110px}
+.redes .plus{ right:-28px}
+
+.sidebar .busca_codigo span{ background: url(i/input.png) no-repeat 179px bottom; display: block; height:42px; float: left; padding: 0 15px 0 0;}
+.sidebar .busca_codigo input[type='text']{background: url(i/input.png) no-repeat; height:40px; width:169px; line-height: 40px; border:none; padding: 0 5px; outline:none}
+.sidebar .busca_codigo input[type=submit]{background: url(i/bt_busca.png) no-repeat center top; height:43px; width:100px;height: 41px;width: 105px;border: none;text-indent: -30px;line-height: 41px;color: white;}
+.sidebar .busca_codigo input[type=submit]:hover{background-position: center bottom}
+.sidebar .bg_busca{margin-top: 5px; background:url(i/bg_busca.png) no-repeat center top; width:285px; height: 626px; position:relative; padding: 9px; font-size: 12px; color: #666}
+
+
+
+
+.bg_busca .bg_prec input{ background: url(i/input_bg_prec.png) no-repeat center center; padding: 9px; border:none;height: 24px;width: 71px;margin: 0 0 0 15px}
+.bg_busca label{padding:9px 0;margin: 0 0 0 0;}
+.bg_busca .bg_prec label{float:none; padding: 0}
+.bg_busca table{margin: 5px 0}
+.bg_busca td{padding: 5px}
+.bg_busca input[type=submit]{background: url(i/busca_imoveis.png) no-repeat center top;padding: 5px;width: 164px;height: 42px;border: none;text-indent: -90px; color:#fff; font-weight: bold}
+.bg_busca input[type=submit]:hover{background-position: center bottom}
+.sidebar .bg_busca form p{ font-size: 13px}
+.conteudo .paginas{ float: right; color:#666; position: relative; width: 680px}
+.paginas h1{ font-size: 20px; color: #666; border-bottom:dashed 1px #ccc; position:relative; margin-bottom: 10px}
+.paginas h2{font-size: 14px; padding: 5px}
+.paginas .btn{display:block; padding: 5px; border: solid 1px #666;position:relative; background: #f8f8f8}
+.paginas .ui-icon{float:left}
+.paginas .ul{margin-left: 10px; padding: 5px}
+.paginas .ul li{ padding: 0 0 0 10px; background: url(i/seta.png) no-repeat left center}
+.paginas .ol {list-style:decimal; padding: 5px; margin-left: 25px}
+.paginas blockquote{ font-style: italic; color: #999; font-size: 24px; font-family: "Monotype Corsiva"; padding:10px 0 10px 40px; text-align: right; }
+.paginas blockquote span{ font-size: 40px; font-family:"Trebushet MS" }
+.paginas a{color:#666;}
+.paginas a:hover{color:#ff3300}
+.paginas .breadcumb{padding:5px; background: #f8f8f8; border:dotted 1px #999; margin-bottom: 10px}
+.paginas p{padding: 5px}
+.paginas form input[type=text],.paginas form textarea{ padding: 5px; border:solid 1px #ccc;}
+.paginas td{padding: 5px}
+
+
+
+.paginas .atendimento{position:fixed;top: 20px;right:10px;z-index:20}
+.conteudo .paginas .banner_pagina{margin: 0 auto;width:669px; height: 390px;position: relative; background: url(../banner/banner_shadow.png) no-repeat center bottom}
+.banner_pagina ul li a img{position: absolute; top: 20px}
+.banner_pagina #prev{position:absolute; z-index: 10; right:0; top:160px}
+.banner_pagina #next{position:absolute; z-index: 10; left:0; top:160px}
+.banner_pagina #nav{position: absolute;bottom: -5px;right: 11px;}
+.banner_pagina #nav a{ background: url(i/nav_banner.png) no-repeat center top; padding: 12px 16px; color: #fff; -webkit-transition:none;-moz-transition:none}
+.banner_pagina #nav a.activeSlide{ background-position: center bottom}
+
+.conteudo .paginas .tabs{background:url(i/bg_tabs.png) no-repeat center bottom; width:678px; height: 373px; margin: 0 auto; margin-top:34px }
+
+.tabs ul.tabNavigation li{ float: left; display: block}
+.tabs ul.tabNavigation li a{background: url(i/tabs.png) no-repeat center bottom;display: block;padding: 7px;height: 34px;width: 155px;text-align: center;line-height: 35px;color: #fff;-webkit-transition:none; -moz-transition:none}
+.tabs ul.tabNavigation li a.selected{background-position: center top; color: #666}
+.tabs .nav-slid{position: absolute; bottom: 5px;right: 9px;}
+.tabs .nav-slid a{font-size: 38px; font-height:bold; color: #ff9900; font-family: Arial}
+.tabs p{padding: 0}
+.tabs h2{padding: 0}
+.tabs .slid-item {width: 659px;margin: 0 0 0 11px;float:left}
+.tabs .slid-item ul li{float: left;margin: 15px 22px; position: relative;width: 175px;height: 275px;}
+.tabs .slid-item ul li .item .foto-item{ border: solid 2px #fff; margin-bottom: 10px}
+.tabs .slid-item ul li .item {background: url(i/bg_itens.png) no-repeat center 204px}
+.tabs .leiaMais{position: absolute; bottom: 0; right: -20px;}
+
+.conteudo .paginas .tabs2 { background: none; height: auto; margin-bottom: 20px}
+.paginas .detalhe-imovel {padding: 0;width: 672px;margin-left: 3px; float: left; background: #ebebeb}
+.detalhe-imovel .dados{width:672px;}
+.detalhe-imovel .complemento{ padding: 10px; text-align: center}
+.detalhe-imovel .impar{background: #f5f4f2;}
+.detalhe-imovel .par{ background: #e7e6e4}
+.detalhe-imovel .campos{text-align: right}
+.paginas .bancos{width:200px; border: solid 1px #ccc; background: #fff; height: 200px; padding: 1px; float: left; margin-right: 34px; margin-bottom: 35px}
+.bancos .bg{background: #ebebeb; height: 190px;width: 190px;padding: 5px;}
+.bancos .foto{padding: 2px;width:186px; height: 150px; background: #fff}
+
+.bancos, .bancos .bg, .bancos .foto{border-radius:5px}
+
+.listagem ul li{float: left;margin: 15px 77px 15px 0; position: relative;width: 175px;height: 295px;}
+.listagem ul li .item .foto-item{ border: solid 2px #fff; margin-bottom: 10px; -webkit-transition:all .5s linear; -moz-transition:all .5s linear; border-right:#ccc solid 2px;border-bottom:solid 2px #ccc;}
+.listagem ul li:hover .foto-item{border:solid 2px #999}
+.listagem ul li .item {background: url(i/bg_itens.png) no-repeat center 221px}
+.listagem .leiaMais{position: absolute; bottom: 0; right:0}
+.listagem .MRnone{margin-right: 0}
+
+.footer{ background:#000 url(i/bg_footer.jpg)  repeat-x top;color: #fff; margin-top: 10px}
+.footer .footer_int{width: 995px; margin: 0 auto; height: 201px}
+.footer_int h3{ font-size: 20px; margin-bottom: 10px}
+.footer_int .menu_footer {width:670px; margin: 0 auto 0 auto;}
+
+.menu_footer li{background: url(i/divisao_menu_footer.jpg) no-repeat right center;display: block;float: left;}
+.menu_footer li a{padding: 8px 13px;color: #666;font-size: 12px; float: left;-webkit-transition:all .4s linear; -moz-transition:all .4s linear; border-top: solid 1px #ccc; font-family: 'MyriadProCondensed'; font-size: 16px}
+.menu_footer li a:hover{ background: #f8f8f8; color:#ff9900; border-top: solid 1px #ff9900}
+
+.footer .endereco_footer{ width: 295px; float: left; font-size: 12px; margin-top: 10px}
+.footer .redes_footer{ float: left;width:395px;margin-top: 10px}
+.redes_footer ul li{display: inline-block}
+.footer .plantao_footer{float: left; width: 300px; margin-top: 10px}
+.plantao_footer .img_contato{background:url(i/plantao.png) no-repeat center right; width:290px; height: 65px}
+.plantao_footer .img_contato p{ padding:6px 0 0 90px; line-height: 17px; text-align: center; font-size: 16px; font-weight: bold}
+.footer .copy{ width:980px; margin: 0 auto; text-align: right; font-size: 12px}
+
+
+
+
+/***/
+.clear{ clear: both; display: block}
+.right{ float: right; display: block}
+.left{ float: left; display: block}
+.laranja{color:#FF9900}
+.leiaMais{padding: 5px 20px 5px 31px; background:url(i/bg_mais.png) no-repeat left top;z-index: 20;display: block;height: 18px;-webkit-transition:none;-moz-transition:none}
+.leiaMais:hover{background-position:left bottom}
+.pagination{border-top: dotted 1px #999; padding: 5px;background: #f8f8f8; text-align: center; clear: both}
+.pagination a{padding: 5px 10px; margin: 0 5px 0 0; background: #ebebeb; border-right: solid 1px #ccc; border-bottom: 1px solid #ccc}
+.pagination a:hover{background:#ff3300; color:#fff}
+.bancos .mrRight{margin-right: 0}

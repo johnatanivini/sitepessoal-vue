@@ -29,12 +29,14 @@ jobs:
     - run: npm ci  --force
     - run: npm run build --if-present
     - name: Publish
-      uses: appleboy/scp-action@v0.1.4
+      uses: appleboy/scp-action@v0.1.2
       with:
+        debug: true
         source: ./dist/*
         host:  ${{ secrets.HOST }}
         remote: ${{ secrets.TARGET }}
         port: ${{ secrets.PORT }}
         username: ${{ secrets.USERNAME }}
-        password: ${{secrets.PASSPHRASE}}
+        use_insecure_cipher: true
         target: ${{ secrets.TARGET}}
+        key: ${{ secrets.SSHKEY}}

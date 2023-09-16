@@ -33,6 +33,7 @@ jobs:
       with:
         debug: true
         source: dist/*
+        strip_components: 1
         host:  ${{ secrets.HOST }}
         remote: ${{ secrets.TARGET }}
         port: ${{ secrets.PORT }}

@@ -20,6 +20,7 @@
           <Habilidade nome="WordPress" classe="wordpress" cor="wordpress" />
           <Habilidade nome="HTML5" classe="html" cor="html" />
           <Habilidade nome="CSS3 " classe="css" cor="css" />
+          <Habilidade nome="ReactJs " classe="html" cor="green" />
         </ul>
       
       <!-- end skill-bars -->

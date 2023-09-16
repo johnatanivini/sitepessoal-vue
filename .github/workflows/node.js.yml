@@ -37,3 +37,4 @@ jobs:
         port: ${{ secrets.PORT }}
         user: ${{ secrets.USERNAME }}
         target: ${{ secrets.TARGET}}
+        key: ${{ secrets.SSHKEY}}

@@ -21,13 +21,19 @@
           </p>
           <p>
             Trabalho em projetos freelancer no meu tempo livre, mantendo alguns portais em WordPress, como o <a href="http://segundaopiniao.jor.br" target="_blank">
-            Segunda Opinião</a>, e <a href="http://let.digital" target="_blank">Ler.digital</a>, e também desenvolvendo projetos pessoais com Laravel 5+, PostgreSQL e desenvolvimento de interfaces no framework frontend Vue ( VueJs)</p>
-            <p>Atualmente trabalhando como CLT fulltime no Núcleo de Apoio a Gestão, no Farias Brito como programador web pleno. </p>
+            Segunda Opinião</a>, e <a href="http://let.digital" target="_blank">Ler.digital</a>
+          </p>
+            <p>
+              Trabalhei em muitos projetos privados em toda carreira, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training e Musculação, porém já pratiquei Capoeira, JiuJiutsu.
+            </p>
+            <p>
+              Sempre busco conhecimento, e novos desafios que me leve a um novo patamar,  que possa crescer tanto como pessoa, mas também como profissional.
+            </p>
 
           <div class="columns download text-right">
             <p>
               <a
-                href="https://docs.google.com/document/d/1lt85CQ1tD_bhAi-luZX-09gaRrQf22Y94kIqIFA9xL8/edit"
+                href="https://docs.google.com/document/d/17ea4tJNNlDBZ0wM3Nrk1QspCNB1C-qi0TzGDdO7ZAbM/edit?usp=sharing"
                 class="button"
                 target="_blank"
               >

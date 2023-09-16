@@ -35,6 +35,6 @@ jobs:
         host:  ${{ secrets.HOST }}
         remote: ${{ secrets.TARGET }}
         port: ${{ secrets.PORT }}
-        user: ${{ secrets.USERNAME }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{secrets.PASSPHRASE}}
         target: ${{ secrets.TARGET}}
-        key: ${{ secrets.SSHKEY}}

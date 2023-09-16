@@ -29,11 +29,11 @@ jobs:
     - run: npm ci  --force
     - run: npm run build --if-present
     - name: Publish
-      uses: nogsantos/scp-deploy@master
+      uses: appleboy/scp-deploy@master
       with:
-        src: ./dist/*
-        host: ${{ secrets.HOST }}
+        source: ./dist/*
+        host:  ${{ secrets.HOST }}
         remote: ${{ secrets.TARGET }}
         port: ${{ secrets.PORT }}
         user: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSHKEY }}
+        target: ${{ secrets.TARGET}}

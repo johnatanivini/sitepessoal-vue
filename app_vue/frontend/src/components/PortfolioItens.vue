@@ -38,7 +38,7 @@ export default {
   },
   mounted() {
     console.log(process.env.VUE_APP_API_URL)
-    fetch(this.urlApi+"/api/portfolio")
+    fetch(this.urlApi+"api/portfolio")
     
       .then(response => response.json())
       .then(data => this.itens = data)

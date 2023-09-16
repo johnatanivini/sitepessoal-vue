@@ -22,17 +22,3 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          source: "."
          target: ${{ secrets.TARGET }}
-    
-    - name: Executing remote command via ssh
-      uses: appleboy/ssh-action@master
-      with:
-         host: ${{ secrets.HOST }}
-         username: ${{ secrets.USERNAME }}
-         port: ${{ secrets.PORT }}
-         key: ${{ secrets.SSHKEY }}
-         passphrase: ${{ secrets.PASSPHRASE }}
-         script: |
-              cd ${{ secrets.TARGET }} && npm install
-              npm run build:staging
-              
-    

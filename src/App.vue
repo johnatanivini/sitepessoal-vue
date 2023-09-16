@@ -17,7 +17,7 @@ import Resume from "./components/Resume";
 import Servicos from "./components/Servicos";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
-import Contato from "./components/Contato"
+import Contato from "./components/Contato";
 
 export default {
   components: {

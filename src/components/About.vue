@@ -24,7 +24,7 @@
             Segunda Opinião</a>, e <a href="http://let.digital" target="_blank">Ler.digital</a>
           </p>
             <p>
-              Trabalhei em muitos projetos privados em toda carreira, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training e Musculação, porém já pratiquei Capoeira, JiuJiutsu.
+              Trabalhei em muitos projetos privados em toda carreira, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training e Musculação, porém já pratiquei Capoeira, Jiu-Jitsu.
             </p>
             <p>
               Sempre busco conhecimento, e novos desafios que me leve a um novo patamar,  que possa crescer tanto como pessoa, mas também como profissional.

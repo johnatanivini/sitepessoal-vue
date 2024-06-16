@@ -6,13 +6,13 @@
           <img
             class="profile-pic"
             src="https://avatars0.githubusercontent.com/u/2191326?v=3&amp;s=460"
-            alt="Johnatan Í - Criação de sites"
+            alt="Johnatan Í - Desenvolvimento de Software"
           />
         </div>
         <div class="nine columns main-col">
           <h2>
             Sobre Mim
-            <span class="mfp-hide" v-show="false">Desenvolvimento de sites</span>
+            <span class="mfp-hide" v-show="false">Desenvolvimento de Software para Web</span>
           </h2>
           <p>
             Olá, me chamo Johnatan Ívini, sou desenvolvedor desde 2009 sou formado em <br>  
@@ -24,20 +24,20 @@
             Segunda Opinião</a>, e <a href="http://let.digital" target="_blank">Ler.digital</a>
           </p>
             <p>
-              Trabalhei em muitos projetos privados em toda carreira, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training e Musculação, porém já pratiquei Capoeira, Jiu-Jitsu.
+              Trabalhei em muitos projetos privados em toda vida, desde que sai do chão de fábrica como carregador/assistente de expedição de malhas e tecidos da empresa Jangadeiro Têxtil, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training (Crossfit) e Musculação, porém ainda me pego aqui e acolá praticando  Capoeira e/ou Jiu-Jitsu.
             </p>
             <p>
-              Sempre busco conhecimento, e novos desafios que me leve a um novo patamar,  que possa crescer tanto como pessoa, mas também como profissional.
+              Sempre procuro conhecimento, e novos desafios que me deixe motivado pelo dasafio de querer continuar e  ver o negócio acontecer,  que me possa continuar me fazer crescer  tanto como pessoa, mas também como profissional.
             </p>
 
           <div class="columns download text-right">
             <p>
               <a
-                href="https://docs.google.com/document/d/17ea4tJNNlDBZ0wM3Nrk1QspCNB1C-qi0TzGDdO7ZAbM/edit?usp=sharing"
+                href="https://drive.google.com/file/d/19btCCEbxAg-pgWnDt6WhKQTcB8oTDaQT/view?usp=sharing"
                 class="button"
                 target="_blank"
               >
-                <i class="fa fa-download"></i>Download CV
+                <i class="fa fa-download"></i>Baixar CV
               </a>
             </p>
           </div>

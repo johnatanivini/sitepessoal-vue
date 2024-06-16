@@ -7,7 +7,7 @@
             <span
               class="mfp-hide"
               v-show="false"
-            >Entre em contato ,peça o orçamento para seu site em WordPress</span>
+            >Entre em contato</span>
           </h6>
         </div>
         <div class="ten columns">

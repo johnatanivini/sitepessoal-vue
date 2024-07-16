@@ -33,7 +33,7 @@
           <div class="columns download text-right">
             <p>
               <a
-                href="https://drive.google.com/file/d/19btCCEbxAg-pgWnDt6WhKQTcB8oTDaQT/view?usp=sharing"
+                href="https://docs.google.com/document/d/1lt85CQ1tD_bhAi-luZX-09gaRrQf22Y94kIqIFA9xL8/edit?usp=sharing"
                 class="button"
                 target="_blank"
               >

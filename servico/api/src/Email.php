@@ -13,6 +13,7 @@ class Email extends PHPMailer
         $this->Host = $_ENV['MAIL_HOST'];
         $this->Username = $_ENV['MAIL_USER'];
         $this->Password = $_ENV['MAIL_PASS'];
+        //$this->smtpDebug = 2;
         $this->Port = 587;
         $this->SMTPAuth = true;
         $this->isHTML(true);

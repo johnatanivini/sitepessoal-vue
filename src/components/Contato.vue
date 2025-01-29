@@ -181,7 +181,8 @@ export default {
 
       fetch(this.urlApi+"/api/enviar-email", {
         method: "POST",
-        body: form
+        body: form,
+        mode:"no-cors"
       })
         .then(response => {
             if(response.status != 200){

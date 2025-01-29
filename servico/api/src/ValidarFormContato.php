@@ -27,8 +27,6 @@ class ValidarFormContato
        
         $valorCaptcha = (int) $this->atributos->numero1 + (int) $this->atributos->numero2;
 
-        var_dump($subject == '',$subject);
-
         // Check Name
         if (strlen($name) == '') {
             $this->error['name'] = "Por favor, coloque seu nome";

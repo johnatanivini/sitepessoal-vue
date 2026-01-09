@@ -1,0 +1,67 @@
+#whatsapp {
+    padding-bottom: 66px;
+    overflow: hidden;
+    background-color: #45386f;
+    padding-top: 90px;
+    position: relative;
+}
+#whatsapp h1, #whatsapp h2 {
+    color: #fff;
+    padding-bottom: 20px;
+}
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.whatsapp-btn span {
+  font-size: 16px;
+  color: #fff;
+}
+
+.whatsapp-btn.is-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 16px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp-btn.is-floating .icon {
+  margin-right: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-btn.is-floating span {
+  display: none;
+}

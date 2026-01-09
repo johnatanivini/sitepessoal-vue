@@ -8,7 +8,7 @@
       <RedeSocial
         titulo="Instagram"
         icon="fa fa-instagram"
-        link="https://instagram.com/johnatanivini"
+        link="https://instagram.com/ivinidev"
       />
     </ul>
 </template>

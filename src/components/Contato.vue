@@ -1,5 +1,6 @@
 <template>
   <section id="contact">
+    <div class="circle-section cor-cinzaclaro"></div>
     <div id="contato">
       <div class="row section-head">
         <div class="two columns header-col">

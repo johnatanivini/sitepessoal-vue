@@ -10,41 +10,47 @@
           />
         </div>
         <div class="nine columns main-col">
-          <h2>
-            Sobre Mim
-            <span class="mfp-hide" v-show="false">Desenvolvimento de Software para Web</span>
-          </h2>
-          <p>
-            Olá, me chamo Johnatan Ívini, sou desenvolvedor desde 2009 sou formado em <br>  
-            Tecnólogo em Gestão em Tecnologia da Informação pela FATENE e <br> Pós Graduado
-            em Análise, Projeto e Gerência de Sistema pela Faculdade Estácio.
-          </p>
-          <p>
-            Trabalho em projetos freelancer no meu tempo livre, mantendo alguns portais em WordPress, como o <a href="http://segundaopiniao.jor.br" target="_blank">
-            Segunda Opinião</a>, e <a href="http://let.digital" target="_blank">Ler.digital</a>
-          </p>
-            <p>
-              Trabalhei em muitos projetos privados em toda vida, desde que sai do chão de fábrica como carregador/assistente de expedição de malhas e tecidos da empresa Jangadeiro Têxtil, e tiro meu tempo livre após, para cuidar do bem estar, como tempo para família,  viagens,  jogos, e principalmente, com academia como Cross  Training (Crossfit) e Musculação, porém ainda me pego aqui e acolá praticando  Capoeira e/ou Jiu-Jitsu.
-            </p>
-            <p>
-              Sempre procuro conhecimento, e novos desafios que me deixe motivado pelo dasafio de querer continuar e  ver o negócio acontecer,  que me possa continuar me fazer crescer  tanto como pessoa, mas também como profissional.
-            </p>
+          <p>Sou <b>Johnatan Ívini</b>, desenvolvedor de software com uma trajetória sólida iniciada em 2009. Graduado em Gestão de Tecnologia da Informação pela FATENE e Pós-Graduado em Análise, Projeto e Gerência de Sistemas pela Estácio, combino conhecimento técnico com visão estratégica de negócios.</p>
 
-          <div class="columns download text-right">
-            <p>
-              <a
-                href="https://docs.google.com/document/d/1lt85CQ1tD_bhAi-luZX-09gaRrQf22Y94kIqIFA9xL8/edit?usp=sharing"
-                class="button"
-                target="_blank"
-              >
-                <i class="fa fa-download"></i>Baixar CV
-              </a>
-            </p>
-          </div>
+          <p>Minha carreira é marcada pela versatilidade. Além de atuar em projetos privados de grande escala, dedico-me ao desenvolvimento de soluções web independentes, gerenciando portais como o Segunda Opinião e o Ler.digital. Minha história profissional é pautada pela resiliência: iniciei minha jornada na indústria, no setor de expedição da Jangadeiro Têxtil, experiência que forjou minha ética de trabalho antes de migrar definitivamente para a tecnologia.</p>
+
+          <p>Movido por desafios, busco constantemente projetos que exijam inovação e crescimento mútuo. Fora dos códigos, mantenho a disciplina e o equilíbrio através do esporte — seja no Cross Training, na musculação ou nas artes marciais (Capoeira e Jiu-Jitsu) — e valorizo o tempo de qualidade em família</p>
+           
+        </div>
+        <div class="nine columns download text-right">
+          <p>
+            <a
+              href="https://docs.google.com/document/d/1lt85CQ1tD_bhAi-luZX-09gaRrQf22Y94kIqIFA9xL8/edit?usp=sharing"
+              class="button"
+              target="_blank"
+            >
+              <i class="fa fa-download"></i>Baixar CV
+            </a>
+          </p>
         </div>
         <!-- end row -->
       </div>
       <!-- end .main-col -->
     </div>
+    <section id="whatsapp">
+      <div class="circle-section cor-marron"></div>
+      <div class="row">
+        <div class="centered columns align-center">
+          <h1>Tem um desafio para mim? </h1>
+          <h2>Vamos conversar sobre seu projeto e transformar sua idéia em código!</h2>
+          <WhatsAppCta label="Solicitar Orçamento" />
+        </div>
+      </div>
+    </section>
   </section>
 </template>
+
+<script>
+  import WhatsAppCta from './WhatsAppCta.vue';
+  export default {
+    name: 'About',
+    components: {
+      WhatsAppCta
+    }
+  };
+</script>

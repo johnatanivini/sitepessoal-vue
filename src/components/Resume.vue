@@ -1,6 +1,6 @@
 <template>
   <section id="resume" style="position:relative">
-    <div class="circle-section  cor-marron">
+    <div class="circle-section  cor-roxo">
     </div>
    
   <div class="row skill">
@@ -11,8 +11,8 @@
    
         <ul class="habilidades">
           <Habilidade nome="PHP 7+" classe="php" cor="blue" />
-          <Habilidade nome="Laravel 5+" classe="laravel" cor="orange" />
-          <Habilidade nome="Codeigniter 3+" classe="laravel" cor="orange" />
+          <Habilidade nome="Laravel" classe="laravel" cor="orange" />
+          <Habilidade nome="Codeigniter" classe="laravel" cor="orange" />
           <Habilidade nome="PostgreSQL" classe="postgresql" cor="blueligth" />
           <Habilidade nome="Vue" classe="vue" cor="greenligth" />
           <Habilidade nome="jQuery" classe="jquery" cor="ocean" />
@@ -20,7 +20,9 @@
           <Habilidade nome="WordPress" classe="wordpress" cor="wordpress" />
           <Habilidade nome="HTML5" classe="html" cor="html" />
           <Habilidade nome="CSS3 " classe="css" cor="css" />
-          <Habilidade nome="ReactJs " classe="html" cor="green" />
+          <Habilidade nome="MySQL " classe="mysql" cor="blue" />
+          <Habilidade nome="Git " classe="git" cor="blueligth" />
+          <Habilidade nome="Docker " classe="docker" cor="blue" />
         </ul>
       
       <!-- end skill-bars -->

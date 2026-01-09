@@ -285,7 +285,15 @@ header .banner-text p {
     top: -44px
 }
 .circle-section.cor-marron{
-    background-color:#282140
+    background-color:#282140;
+}
+
+.circle-section.cor-cinzaclaro{
+    background-color: #ebeeee;
+}
+
+.circle-section.cor-roxo{
+    background-color:#45386f;
 }
 
 .circle-section.cor-marron-2{
@@ -394,9 +402,13 @@ footer a, footer a:visited {
 footer .copyright li{
     color:#383f6d
 }
+#contact {
+    position:relative;
+}
 #contact p.lead {
     font: 18px/36px opensans-light,sans-serif;
     padding-right: 3%;
+    color: #fff;
 }
 #contact span.required{
     color:#d86b4a

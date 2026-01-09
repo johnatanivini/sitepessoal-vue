@@ -2,12 +2,7 @@
   <div class="banner">
     <div class="banner-text">
      <h1 class="responsive-headline" style="font-size: 71.3px;">Johnatan Ívini </h1>
-      <h2>Desenvolvedor Fullstack PHP</h2>
-      <p>Tecnólogo em Gestão de Tecnologia da Informação - FATENE</p>
-      <p>
-        Pós graduado em Análise, Projeto e Gerência de Sistemas da Informação -
-        ESTACIO
-      </p>
+      <h2>Desenvolvedor & Especialista em Sistemas PHP</h2>
       <hr />
     </div>
     <ListaRedesSociais class="social" />

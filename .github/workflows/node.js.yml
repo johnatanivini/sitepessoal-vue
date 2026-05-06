@@ -32,7 +32,7 @@ jobs:
       uses: appleboy/scp-action@v0.1.4
       with:
         debug: true
-        source: dist/*
+        source: "dist/*,servico/*"
         strip_components: 1
         host:  ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}
@@ -40,15 +40,4 @@ jobs:
         use_insecure_cipher: true
         target: ${{ secrets.TARGET}}
         key: ${{ secrets.SSHKEY}}
-    - name: PublishAPi
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        debug: true
-        source: servico/*
-        strip_components: 1
-        host:  ${{ secrets.HOST }}
-        port: ${{ secrets.PORT }}
-        username: ${{ secrets.USERNAME }}
-        use_insecure_cipher: true
-        target: ${{ secrets.TARGET}}
-        key: ${{ secrets.SSHKEY}}
+    

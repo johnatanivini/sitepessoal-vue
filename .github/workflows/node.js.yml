@@ -44,7 +44,7 @@ jobs:
       uses: appleboy/scp-action@v0.1.4
       with:
         debug: true
-        source: dist/*
+        source: servico/*
         strip_components: 1
         host:  ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}

@@ -146,4 +146,12 @@ $app->map(['GET','POST','DELETE','PATCH'],'/{routes:.+}',function($request,$resp
    throw new HttpNotFoundException($request);
 });
 
+/**
+ * Rota de teste para o webhook do whatsapp, apenas para verificar se o webhook está funcionando corretamente.
+ */
+$app->post('/webhook/whatsapp', function (RequestInterface $request, ResponseInterface $response, $args) {
+    $response->withHeader('Content-type', 'application/json')->getBody()->write(json_encode(['code' => 1, 'message' => 'Webhook recebido com successo!']));
+    return $response;
+});
+
 $app->run();

@@ -7,9 +7,9 @@
             <li class="current"><a class="smoothscroll" v-scroll-to="'#home'" href="#home">Home</a></li>
             <li class=""><a class="smoothscroll" v-scroll-to="'#sobre-mim'" href="#sobre-mim">Sobre</a></li>
             <!-- <li class=""><a class="smoothscroll" href="#curriculo">Currículo</a></li> -->
-            <li class=""><a class="smoothscroll" v-scroll-to="'#portfolio'" href="#portfolio">Trabalhos</a></li>
+            <!-- <li class=""><a class="smoothscroll" v-scroll-to="'#portfolio'" href="#portfolio">Trabalhos</a></li> -->
             <!--<li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>-->
-            <li class=""><a class="smoothscroll" href="#whatsapp" v-scroll-to="'#contato'">Contato</a></li>
+            <li class=""><a class="smoothscroll" href="#whatsapp" v-scroll-to="'#whatsapp'">Contato</a></li>
         </ul> <!-- end #nav -->
     </nav>
 

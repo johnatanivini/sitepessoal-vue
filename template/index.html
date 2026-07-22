@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivini.dev | Desenvolvedor Full Stack Sênior & Soluções Corporativas</title>
+    <style>
+        :root {
+            --bg-main: #111315;
+            --bg-secondary: #181b1f;
+            --bg-card: #202429;
+            --olive-dark: #3b4d1e;
+            --olive-primary: #556B2F;
+            --olive-light: #7e9f48;
+            --olive-glow: #a3cc5a;
+            --gold-accent: #D4AF37;
+            --gold-glow: #f3cf55;
+            --text-main: #FFFFFF;
+            --text-muted: #9BA3AB;
+            --border-color: #2e343b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Fundo Interativo de Fibra Óptica */
+        #network-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Estrutura de Navegação */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(17, 19, 21, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .logo span {
+            color: var(--olive-light);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold-accent);
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, var(--olive-primary), var(--olive-dark));
+            color: var(--text-main);
+            padding: 0.6rem 1.4rem;
+.            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--olive-light);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(85, 107, 47, 0.2);
+        }
+
+        .btn-cta:hover {
+            background: linear-gradient(135deg, var(--olive-light), var(--olive-primary));
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Seção Hero */
+        .hero {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(85, 107, 47, 0.2);
+            color: var(--olive-glow);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--olive-primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, #A0AAB2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+
+        /* Seção de Conteúdo */
+        .section {
+            position: relative;
+            z-index: 10;
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(32, 36, 41, 0.7);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--olive-light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(85, 107, 47, 0.2);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(85, 107, 47, 0.15);
+            border: 1px solid var(--olive-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--gold-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--olive-glow);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            border: 1px solid rgba(85, 107, 47, 0.3);
+        }
+
+        /* Seção Tech Stack */
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stack-item {
+            background: rgba(24, 27, 31, 0.8);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stack-item:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-3px);
+        }
+
+        .stack-item h4 {
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .stack-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Estatísticas */
+        .stats-banner {
+            background: linear-gradient(90deg, var(--bg-secondary) 0%, rgba(85, 107, 47, 0.15) 50%, var(--bg-secondary) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 4rem 5%;
+            margin: 4rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 3rem;
+            color: var(--gold-accent);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Rodapé */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: var(--bg-main);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="network-canvas"></canvas>
+
+    <header>
+        <a href="#" class="logo">Ivini<span>.dev</span></a>
+        <nav>
+            <a href="#servicos">Soluções</a>
+            <a href="#stack">Tech Stack</a>
+            <a href="#sobre">Diferenciais</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <a href="#contato" class="btn-cta">Fale Comigo</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">Desenvolvedor Full Stack & Soluções Corporativas</div>
+            <h1>Engenharia de Software Moderna e Sustentação de Sistemas.</h1>
+            <p>Especialista em ecossistemas PHP, migrações de legados, aplicações web de alta performance e infraestrutura robusta.</p>
+            <a href="#servicos" class="btn-cta" style="padding: 0.8rem 2rem; font-size: 1rem;">Conhecer Serviços</a>
+        </section>
+
+        <section id="servicos" class="section">
+            <div class="section-title">
+                <h2>Soluções Corporativas & Serviços</h2>
+                <p>Do desenvolvimento do zero à sustentação, otimização e migração de ambientes complexos.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="card-icon">SYS</div>
+                    <h3>Migração & Sustentação de Legados</h3>
+                    <p>Evolução segura e manutenção especializada de aplicações e sistemas legados em PHP 5+ até versões modernas, garantindo estabilidade e segurança.</p>
+                    <div class="tech-tags">
+                        <span class="tag">PHP 5+ / 8</span>
+                        <span class="tag">Refatoração</span>
+                        <span class="tag">Legados</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">WEB</div>
+                    <h3>Aplicações Web & APIs</h3>
+                    <p>Desenvolvimento de sistemas corporativos customizados, painéis e integrações utilizando arquitetura limpa, código legível e alta escalabilidade.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">OPS</div>
+                    <h3>Hospedagem & Domínios</h3>
+                    <p>Gestão completa de infraestrutura em nuvem, configuração de servidores Linux, registro de domínios e suporte a ambientes de produção.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Google Cloud</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">WPS</div>
+                    <h3>Manutenção em Sites WordPress</h3>
+                    <p>Otimização de performance, correções estruturais, segurança avançada e suporte contínuo para ecossistemas baseados em WordPress.</p>
+                    <div class="tech-tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Segurança</span>
+                        <span class="tag">Manutenção</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="sobre" class="stats-banner">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>Clean</h4>
+                    <p>Code & Arquitetura Limpa</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Full</h4>
+                    <p>Stack Integration</p>
+                </div>
+                <div class="stat-item">
+                    <h4>24/7</h4>
+                    <p>Sustentação Robusta</p>
+                </div>
+                <div class="stat-item">
+                    <h4>B2B</h4>
+                    <p>Foco Corporativo</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="stack" class="section">
+            <div class="section-title">
+                <h2>Stack Tecnológica & Skills</h2>
+                <p>Ferramentas, linguagens e metodologias aplicadas na entrega de produtos de alto valor.</p>
+            </div>
+            <div class="stack-grid">
+                <div class="stack-item">
+                    <h4>PHP 8 & Laravel</h4>
+                    <span>Backend & APIs</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Vue.js & TailwindCSS</h4>
+                    <span>Frontend Moderno</span>
+                </div>
+                <div class="stack-item">
+                    <h4>MySQL</h4>
+                    <span>Modelagem & Performance</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Google Cloud</h4>
+                    <span>Cloud & Escalabilidade</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Docker & Linux</h4>
+                    <span>Containers & Infra</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Javascript</h4>
+                    <span>Interatividade Web</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Clean Code</h4>
+                    <span>Arquitetura Limpa</span>
+                </div>
+                <div class="stack-item">
+                    <h4>Sustentação de Legados</h4>
+                    <span>PHP 5+ / Migrações</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section" style="text-align: center; max-width: 800px;">
+            <div class="section-title">
+                <h2>Precisa de uma solução sob medida?</h2>
+                <p>Vamos conversar sobre o seu projeto, modernização de sistemas ou suporte corporativo.</p>
+            </div>
+            <a href="mailto:contato@ivini.dev" class="btn-cta" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Entrar em Contato</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ivini.dev - Soluções Corporativas em Tecnologia.</p>
+        <p style="font-size: 0.8rem; opacity: 0.5;">© 2026 Ivini.dev. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const particleCount = Math.min(Math.floor(window.innerWidth / 15), 80);
+        const particles = [];
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.8,
+                vy: (Math.random() - 0.5) * 0.8,
+                size: Math.random() * 2 + 1,
+                isFloatingPixel: Math.random() > 0.7
+            });
+        }
+
+        let scrollGlow = 0.1;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (maxScroll > 0) {
+                const scrollPercentage = scrollTop / maxScroll;
+                
+                if (scrollPercentage <= 0.5) {
+                    scrollGlow = 0.15 + (scrollPercentage * 2) * 0.75;
+                } else {
+                    scrollGlow = 0.9 - ((scrollPercentage - 0.5) * 2) * 0.75;
+                }
+                
+                scrollGlow = Math.max(0.1, Math.min(0.9, scrollGlow));
+            }
+        });
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                if (p.isFloatingPixel) {
+                    ctx.fillStyle = `rgba(212, 175, 55, ${scrollGlow})`;
+                    ctx.fillRect(p.x, p.y, p.size * 1.5, p.size * 1.5);
+                } else {
+                    ctx.fillStyle = `rgba(163, 204, 90, ${scrollGlow * 0.8})`;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    let maxDist = 130;
+
+                    if (dist < maxDist) {
+                        let lineAlpha = (1 - dist / maxDist) * scrollGlow;
+                        
+                        if (scrollGlow > 0.5 && (i + j) % 3 === 0) {
+                            ctx.strokeStyle = `rgba(212, 175, 55, ${lineAlpha * 0.8})`;
+                            ctx.lineWidth = 1.2;
+                        } else {
+                            ctx.strokeStyle = `rgba(126, 159, 72, ${lineAlpha})`;
+                            ctx.lineWidth = 0.8;
+                        }
+
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

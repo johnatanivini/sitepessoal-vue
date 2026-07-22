@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         { name: 'twitter:description', content: 'Especialista em ecossistemas PHP, migrações de legados, aplicações web de alta performance e infraestrutura robusta.' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/empresa.png' },
         { rel: 'canonical', href: 'https://ivini.dev/' }
       ]
     }

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#" class="logo">Ivini<span>.dev</span></a>
+    <a href="#" class="logo"><img src="/empresa.png" alt="ivini.dev"/> IVINI<span>.DEV</span></a>
     <nav>
       <a href="#servicos">Soluções</a>
       <a href="#projetos">Projetos</a>

@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [24.x]
 
     steps:
       - name: Checkout repository
@@ -33,8 +33,9 @@ jobs:
 
       - name: Prepare dist directory for deployment compatibility
         run: |
+          rm -rf dist
           mkdir -p dist
-          rsync -a .output/public/ dist/ 2>/dev/null || cp -rn .output/public/. dist/ 2>/dev/null || true
+          cp -r .output/public/* dist/
 
       - name: Publish via SCP
         uses: appleboy/scp-action@v0.1.7

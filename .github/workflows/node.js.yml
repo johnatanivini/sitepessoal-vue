@@ -33,8 +33,9 @@ jobs:
 
       - name: Prepare dist directory for deployment compatibility
         run: |
+          rm -rf dist
           mkdir -p dist
-          cp -r .output/public/* dist/
+          cp -r .output/public/. dist/
 
       - name: Publish via SCP
         uses: appleboy/scp-action@v0.1.7

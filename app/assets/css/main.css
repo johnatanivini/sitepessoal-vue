@@ -67,6 +67,10 @@ header {
     gap: 0.3rem;
 }
 
+.logo > img {
+     margin-top: 3px;
+}
+
 .logo span {
     color: var(--olive-light);
 }
@@ -408,3 +412,13 @@ footer p {
     flex-wrap: wrap;
 }
 
+footer .logo {
+    font-size: 1rem;
+}
+
+footer > div > img {
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 3px;
+}

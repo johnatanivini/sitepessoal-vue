@@ -34,13 +34,13 @@ jobs:
       - name: Prepare dist directory for deployment compatibility
         run: |
           mkdir -p dist
-          cp -r .output/public/* dist/
+          rsync -a .output/public/ dist/ 2>/dev/null || cp -rn .output/public/. dist/ 2>/dev/null || true
 
       - name: Publish via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
           debug: true
-          source: "dist/*,.output/public/*,servico/*"
+          source: "dist/*,servico/*"
           strip_components: 1
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}

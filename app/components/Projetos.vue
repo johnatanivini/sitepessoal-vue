@@ -18,13 +18,16 @@
         </div>
         <div class="project-content">
           <h3>Ajeita Cursos</h3>
-          <p>Plataforma e-learning e qualificação profissional completa, com gestão de alunos, cursos interativos, streaming de aulas e métricas de progresso.</p>
+          <p>Plataforma SaaS full-stack que converte PDFs e temas em cursos estruturados usando inteligência artificial (Google Gemini e Grok)</p>
           <div class="tech-tags" style="margin-bottom: 1.5rem;">
             <span class="tag">Vue.js</span>
             <span class="tag">TailwindCSS</span>
             <span class="tag">PHP / Laravel</span>
+            <span class="tag">Google Cloud</span>
             <span class="tag">MySQL</span>
-            <span class="tag">REST API</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Rest Api</span>
+            <span class="tag">Api Stripe</span>
           </div>
           <div class="project-footer">
             <a 
@@ -52,13 +55,14 @@
         </div>
         <div class="project-content">
           <h3>Buxin</h3>
-          <p>Plataforma SaaS para gestão de delivery e automação de pedidos para restaurantes, oferecendo acompanhamento em tempo real, painel financeiro e alta escala.</p>
+          <p>Plataforma SaaS White Label para gestão de delivery e automação de pedidos para restaurantes, oferecendo acompanhamento em tempo real, painel financeiro e alta escala.</p>
           <div class="tech-tags" style="margin-bottom: 1.5rem;">
             <span class="tag">PHP / Laravel</span>
             <span class="tag">Vue.js</span>
             <span class="tag">TailwindCSS</span>
             <span class="tag">Webhooks</span>
             <span class="tag">Docker</span>
+            <span class="tag">Api Stripe</span>
             <span class="tag">Cloud</span>
           </div>
           <div class="project-footer">

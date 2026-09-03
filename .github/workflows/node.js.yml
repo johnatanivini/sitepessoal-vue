@@ -37,15 +37,29 @@ jobs:
           mkdir -p dist
           cp -r .output/public/. dist/
 
-      - name: Publish via SCP
-        uses: appleboy/scp-action@v0.1.7
+      # Passo adicionado: Limpar a pasta dist antiga na VPS antes de enviar a nova.
+      # Isso evita que arquivos de builds velhos acumulem espaço no servidor.
+      - name: Clean old build on VPS
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          debug: true
-          source: "dist/*,servico/*"
-          strip_components: 1
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          script: |
+            rm -rf ${{ secrets.TARGET }}/dist/*
+            rm -rf ${{ secrets.TARGET }}/servico/*
+
+      - name: Publish via SCP
+        uses: appleboy/scp-action@master
+        with:
+          debug: true
+          # Uso de ** garante que todos os subdiretórios sejam copiados
+          source: "dist/**,servico/**"
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
           use_insecure_cipher: true
           target: ${{ secrets.TARGET }}
-          key: ${{ secrets.SSHKEY }}
+          # strip_components foi removido para que as pastas 'dist' e 'servico' entrem intactas

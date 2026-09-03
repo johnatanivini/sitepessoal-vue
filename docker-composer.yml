@@ -1,0 +1,21 @@
+services:
+  app:
+    image: nginx:alpine
+    container_name: site_ivini_dev
+    restart: unless-stopped
+    volumes:
+      # O Nginx lê os arquivos que o GitHub Actions jogar dentro de ./dist
+      - ./dist:/usr/share/nginx/html:ro
+    networks:
+      - web_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web_proxy"
+      - "traefik.http.routers.ivinidev.rule=Host(`ivini.dev`) || Host(`www.ivini.dev`)"
+      - "traefik.http.routers.ivinidev.entrypoints=websecure"
+      - "traefik.http.routers.ivinidev.tls.certresolver=myresolver"
+      - "traefik.http.services.ivinidev.loadbalancer.server.port=80"
+
+networks:
+  web_proxy:
+    external: true

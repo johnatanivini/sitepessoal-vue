@@ -67,7 +67,7 @@
           </div>
           <div class="project-footer">
             <a 
-              href="https://buxin.com.br" 
+              href="https://web.buxin.com.br" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="btn-cta" 

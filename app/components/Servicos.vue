@@ -56,29 +56,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="card card-animated" style="--card-index: 3;">
-        <div class="card-glow-accent"></div>
-        <div class="card-header-wrapper">
-          <div class="card-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
-              <path d="M17.5 19.5 18 19A5 5 0 0 0 10.55 14A4 4 0 0 0 3 17"/>
-              <line x1="12" x2="12" y1="12" y2="21"/>
-              <polyline points="9 15 12 12 15 15"/>
-            </svg>
-          </div>
-          <span class="card-number">03</span>
-        </div>
-        <h3>Nuvem, DevOps & Servidores</h3>
-        <p>Orquestração de infraestrutura em nuvem, configuração de servidores Linux de alto rendimento, contêineres Docker e ambientes protegidos.</p>
-        <div class="tech-tags">
-          <span class="tag">Google Cloud</span>
-          <span class="tag">Linux / Nginx</span>
-          <span class="tag">Docker</span>
-          <span class="tag">CI/CD</span>
-        </div>
-      </div>
-
       <!-- Card 4 -->
       <div class="card card-animated" style="--card-index: 4;">
         <div class="card-glow-accent"></div>
